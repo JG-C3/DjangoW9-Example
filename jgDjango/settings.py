@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'page',
     'game',
+    # [코드 작성] account 앱 등록
     'account',
     'django.contrib.admin',
     'django.contrib.auth',

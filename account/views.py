@@ -11,7 +11,7 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('page:index')
+            return redirect('account:login')
     else:
         form = UserCreationForm()
     context = {
