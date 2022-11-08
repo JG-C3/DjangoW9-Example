@@ -29,7 +29,6 @@
       <a href="{% url 'game:game_list' %}">게임목록</a>
     </span>
     <!-- [코드 작성] 계정 관련 코드 추가 -->
-    <!-- [코드 작성] 로그인 한 경우와 하지 않은 경우 분기처리 -->
     {% if user.is_authenticated %}
       <span>
         <a href="{% url 'account:logout' %}" onclick="return userLogout()">로그아웃</a>
@@ -51,13 +50,5 @@
     {% block body %}
     {% endblock %}
   </div>
-
-  <script>
-    // [코드 작성] 확인창을 띄우는 JavaScript 코드
-    function userLogout() {
-      const result = confirm("로그아웃 하시겠습니까?");
-      return result;
-    }
-  </script>
 </body>
 </html>
