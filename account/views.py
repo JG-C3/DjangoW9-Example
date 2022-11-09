@@ -15,7 +15,6 @@ def signup(request):
     else:
         form = UserCreationForm()
     context = {
-        'type': '회원가입',
         'form': form,
     }
     return render(request, 'account/form.html', context)
@@ -29,11 +28,6 @@ def login(request):
     else:
         form = AuthenticationForm()
     context = {
-        'type': '로그인',
         'form': form,
     }
     return render(request, 'account/form.html', context)
-
-def logout(request):
-    auth_logout(request)
-    return redirect('page:index')
