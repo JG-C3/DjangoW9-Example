@@ -1,8 +1,8 @@
 # [코드 추가] redirect 추가
 from django.shortcuts import render, redirect
-# [코드 추가] UserCreationForm, AuthenticationForm 추가
+# [코드 작성] UserCreationForm, AuthenticationForm 추가
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-# [코드 추가] login 함수를 auth_login 으로, logout 함수를 auth_logout 으로 추가
+# [코드 작성] login 함수를 auth_login 으로, logout 함수를 auth_logout 으로 추가
 from django.contrib.auth import login as auth_login, logout as auth_logout
 
 # Create your views here.
