@@ -109,7 +109,7 @@ def adventure_home(request):
     else:
         # [코드 수정] Character 모델 중 id가 1인 캐릭터 객체를 가져옴
         # [코드 수정] None을 지우고 작성
-        character = Character.objects.get(id=2)
+        character = Character.objects.get(id=1)
         context = {
             'character': character,
         }
@@ -125,7 +125,7 @@ def adventure_home(request):
 def weapon_get(request):
     # [코드 수정] Character 모델 중 id가 1인 캐릭터 객체를 가져옴
     # [코드 수정] None을 지우고 작성
-    character = Character.objects.get(id=2)
+    character = Character.objects.get(id=1)
     
     weapons = Weapon.objects.all()
     # [코드 수정] random 모듈의 choice 함수를 이용하여 selected_weapon 변수에 저장
