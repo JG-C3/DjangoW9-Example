@@ -42,19 +42,17 @@
       <tr>
         <th colspan="2">댓글 목록</th>
       </tr>
-      {% if user.is_authenticated %}
-        <tr>
-          <td class="posting__comment__create" colspan="2">
-            <form action="" method="post">
-              {% csrf_token %}
-              <div>
-                {{comment_form.as_div}}
-                <input class="button" type="submit" value="작성">
-              </div>
-            </form>
-          </td>
-        </tr>
-      {% endif %}
+      <tr>
+        <td class="posting__comment__create" colspan="2">
+          <form action="" method="post">
+            {% csrf_token %}
+            <div>
+              {{comment_form.as_div}}
+              <input class="button" type="submit" value="작성">
+            </div>
+          </form>
+        </td>
+      </tr>
       {% for comment in comments %}
         <tr>
           <td class="posting__comment__content">
